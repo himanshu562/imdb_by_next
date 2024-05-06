@@ -6,4 +6,4 @@ export default function MenuItem( {title,address,Icon}){
             <p className='uppercase hidden sm:inline text-sm'>{title}</p>    {/* we can use  text-transform:uppercase instead of uppercase  and hidden sm:inline make the home and about text visble in larger screen and hide in smaller screen and text-sm make text smaller */}
         </Link>                                                              
     )
-}{/*43:47 to watch*/}
+}
