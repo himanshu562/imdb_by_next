@@ -1,4 +1,4 @@
-"use client";
+"use client";  // adding the dark mmode//
 import {MdLightMode,MdDarkMode} from 'react-icons/md';
 import {useTheme} from 'next-themes';
 import {useState} from 'react';
@@ -6,7 +6,7 @@ import {useEffect} from 'react';
 export default function DarkModeSwitch(){
     const{theme,setTheme,systemTheme}=useTheme();
     const [mounted,setMounted]=useState(false);   // It is very useful in order to manage the state in our Next Js application. It allows us to add the state, and update the state based on the previous state. It provides us optimized and simple way to store the information from previous renders.
-    const currentTheme=theme==='system'?systemTheme:theme; // i as we click on the icon changes the color in to another color and again on click changes to previous color , due to useState it update the next state which has to come. 
+    const currentTheme=theme==='system'?systemTheme:theme; // as we click on the icon changes the color in to another color and again on click changes to previous color , due to useState it update the next state which has to come. 
     useEffect(()=>setMounted(true),[]);    //  useEffect hooks is a predefined hook that handles the effects of the dependency array // after loaded the page it learn the prev. rendering as we click on the icon changes the color in to another color and again on click changes to previous color , due useEffect it remember the previous rendering.
     return (
         <div>{mounted&&(currentTheme==='dark'?(<MdLightMode onClick={()=>setTheme('light')}className='text-xl cursor-pointer hover:text-amber-500'/>):(
